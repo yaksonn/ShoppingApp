@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "453250162792",
+    "project_id": "shoppinglist-317922",
+    "storage_bucket": "shoppinglist-317922.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453250162792:android:b9e671fdd05323e5281bdd",
+        "android_client_info": {
+          "package_name": "com.yaksonn.shoppingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453250162792-acnl79h9ntbgo7o323e714emob7i1uho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3h-ze3N36yRFc1g5EHwoz5pSmikcX76o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453250162792-acnl79h9ntbgo7o323e714emob7i1uho.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

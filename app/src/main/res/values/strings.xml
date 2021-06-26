@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ShoppingApp</string>
+    <string name="name_error_message">Bu alan boş bırakılamaz.</string>
+    <string name="quantity_error_message">Tutar alanı boş bırakılamaz.</string>
+    <string name="amount_error_message">Adet bilgisi boş bırakılamaz.</string>
+    <string name="shopping_list_id_key">SHOPPING_LIST_ID</string>
+    <string name="is_shopping_list_archived_key">IS_SHOPPING_LIST_ARCHIVED</string>
+
+    <string name="home_bar_title">Alışveriş</string>
+    <string name="add_shopping_list_button">Alışveriş Listesi Ekle</string>
+    <string name="shopping_lists">Alışveriş</string>
+    <string name="archived_shopping_lists">Tamamlanmış Alışveriş</string>
+    <string name="shopping_list_item_second_text_prefix">Alınan Ürün</string>
+    <string name="grocery_bar_title">Alışveriş Detayı</string>
+    <string name="shopping_list_dialog_title">Yeni alışveriş listesi</string>
+    <string name="grocery_dialog_title">Yeni ürün ekle</string>
+    <string name="shopping_list_name">Alışveriş listesi adı</string>
+    <string name="location">Lokasyon</string>
+    <string name="grocery_name">Ürün Adı</string>
+    <string name="grocery_quantity">Adet</string>
+    <string name="grocery_amount">Tutar</string>
+    <string name="shopping_list_added">Alışveriş listesi başarılı şekilde eklendi!</string>
+    <string name="grocery_added">Ürün başarılı şekilde eklendi!</string>
+
+    <string name="add">Ekle</string>
+    <string name="more">Daha fazla</string>
+    <string name="add_alarm">Alarm Ekle</string>
+    <string name="add_photo">Foto Ekle</string>
+    <string name="add_desc">Not Ekle</string>
+    <string name="alarm_date">Tarih</string>
+    <string name="alarm_time">Saat</string>
+    <string name="cancel">İptal</string>
+    <string name="decline">Vazgeç</string>
+    <string name="grocery_dialog_tag">Yeni ürün Ekleme</string>
+    <string name="shopping_list_dialog_tag">Yeni Alışveriş listesi oluştur</string>
+    <string name="x_sign">X</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="photoChoose">Fotoğraf Seç</string>
+
+
+    <string-array name="takephoto">
+        <item>Galeriden Seç</item>
+        <item>Fotoğraf Çek</item>
+        <item>İptal</item>
+    </string-array>
+</resources>
