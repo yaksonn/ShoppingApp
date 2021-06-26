@@ -76,10 +76,11 @@ public class GroceryAdapter extends ListAdapter<Grocery, GroceryAdapter.ViewHold
         holder.itemView.setAnimation(AnimationUtils.loadAnimation(context, R.anim.slide_from_left_to_right));
         holder.title.setText(grocery.getName());
         String xSign = context.getString(R.string.x_sign);
-        String groceryPiecesText = xSign + grocery.getPieces();
-        holder.secondText.setText(groceryPiecesText);
-        String quantity = String.valueOf(grocery.component3());
-        holder.thirdText.setText(quantity + " ₺");
+        String quantity = xSign + grocery.component3();
+        holder.secondText.setText(quantity);
+        String groceryPiecesText = String.valueOf(grocery.getPieces());
+        holder.thirdText.setText(groceryPiecesText+" ₺");
+
 
         if (grocery.isDone()) {
             holder.title.setPaintFlags(holder.title.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
