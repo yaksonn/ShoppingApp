@@ -37,7 +37,7 @@ public class GroceryAdapter extends ListAdapter<Grocery, GroceryAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         OnGroceryClickListener onGroceryClickListener;
-        TextView title, secondText;
+        TextView title, secondText, thirdText;
         ImageView statusIcon;
         LinearLayout groceryItem;
 
@@ -45,11 +45,12 @@ public class GroceryAdapter extends ListAdapter<Grocery, GroceryAdapter.ViewHold
             super(itemView.getRoot());
             title = itemView.title;
             secondText = itemView.secondText;
+            thirdText = itemView.thirdText;
             statusIcon = itemView.isDoneIcon;
             groceryItem = itemView.groceryItem;
 
             this.onGroceryClickListener = onGroceryClickListener;
-            if(!isArchived)
+            if (!isArchived)
                 itemView.getRoot().setOnClickListener(this);
         }
 
@@ -77,21 +78,23 @@ public class GroceryAdapter extends ListAdapter<Grocery, GroceryAdapter.ViewHold
         String xSign = context.getString(R.string.x_sign);
         String groceryPiecesText = xSign + grocery.getPieces();
         holder.secondText.setText(groceryPiecesText);
+        String quantity = String.valueOf(grocery.component3());
+        holder.thirdText.setText(quantity + " ₺");
 
-        if(grocery.isDone()) {
+        if (grocery.isDone()) {
             holder.title.setPaintFlags(holder.title.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             holder.secondText.setPaintFlags(holder.title.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             holder.statusIcon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_round_check_circle));
         } else {
-            holder.title.setPaintFlags(holder.title.getPaintFlags() & (~ Paint.STRIKE_THRU_TEXT_FLAG));
-            holder.secondText.setPaintFlags(holder.title.getPaintFlags() & (~ Paint.STRIKE_THRU_TEXT_FLAG));
+            holder.title.setPaintFlags(holder.title.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+            holder.secondText.setPaintFlags(holder.title.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
             holder.statusIcon.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_round_check_circle_outline));
         }
 
         holder.groceryItem.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                Toast.makeText(context, "Uzun tıklamaaa" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Uzun tıklamaaa", Toast.LENGTH_SHORT).show();
                 return false;
             }
         });

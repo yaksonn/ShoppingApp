@@ -89,8 +89,6 @@ class GroceryDialog : BottomSheetDialogFragment() {
 
                 if (binding.descAndPhotoLinear.visibility == View.VISIBLE) {
                     val desc = binding.descTextInput.text.toString().trim()
-                    //
-//                    listenerShopping.onInsertDescAndPhotoButtonClick(desc)
                     listener.onUpdateButtonClick(desc, imageInByte)
                 } else {
                     val groceryName = binding.groceryNameTextInput.text.toString().trim()
@@ -117,7 +115,7 @@ class GroceryDialog : BottomSheetDialogFragment() {
         return binding.root
     }
 
-    fun imageChoose() {
+    private fun imageChoose() {
         if ((ActivityCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.READ_EXTERNAL_STORAGE
@@ -126,8 +124,7 @@ class GroceryDialog : BottomSheetDialogFragment() {
                 requireContext(),
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
             )
-                    != PackageManager.PERMISSION_GRANTED) && /*(ActivityCompat.checkSelfPermission(this@WelcomeActivity2, Manifest.permission.MANAGE_EXTERNAL_STORAGE)
-                        != PackageManager.PERMISSION_GRANTED) && */(ActivityCompat.checkSelfPermission(
+                    != PackageManager.PERMISSION_GRANTED) && (ActivityCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.CAMERA
             )
